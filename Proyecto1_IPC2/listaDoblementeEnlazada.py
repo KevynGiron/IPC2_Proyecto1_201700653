@@ -1,5 +1,5 @@
 from nodoCircular import nodoCircular as nodo
-from procesar_archivo import procesar_archivo as proceso
+from gravphiz import gravphiz as proceso
 
 class listaCircular():
 
@@ -44,7 +44,7 @@ class listaCircular():
             #print(aux.data._matrices__nombre) #imprimir datos de la matriz
             if value == aux.data._matrices__indice:
                 li = aux.data._matrices__lista
-                proceso.crear_lista(li, int(aux.data._matrices__m))
+                proceso.create_string(aux.data._matrices__nombre, aux.data._matrices__m, aux.data._matrices__n, li)
                 break
             #for a in li:
                 #print(a._datos__dato)
@@ -53,9 +53,11 @@ class listaCircular():
                 #print(a._datos__y)
             aux = aux.next
         #print(aux.data._matrices__nombre)
-        if value == aux.data._matrices__indice:
-                li = aux.data._matrices__lista
-                proceso.crear_lista(li, int(aux.data._matrices__m))
+        #---------------------------------------------------------------------------------
+        #if value == aux.data._matrices__indice:
+         #       li = aux.data._matrices__lista
+          #      proceso.create_string(aux.data._matrices__nombre, aux.data._matrices__m, aux.data._matrices__n, li)
+          #-------------------------------------------------------------------------
         #li = aux.data._matrices__lista
         #for a in li:
             #print(a._datos__dato)

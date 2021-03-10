@@ -45,8 +45,8 @@ def cargar_archivo():
             list_aux.append(datos(text, x, y, bi(text)))
         list.push(matrices(nombre, n, m, indice, list_aux))
     print("Listo")
-    list.print()
-    list.search(1)
+    #list.print()
+    #list.search(1)
     #print(list.graphviz_code())
 
 def main():
@@ -73,8 +73,19 @@ def main():
             #list.agregar_final(40)
             #list.agregar_final(50)
             #list.print()
-        else:
+        elif(selec == "2"):
+            print("")
+        elif(selec == "3"):
+            print("")
+        elif(selec == "4"):
+            datos_estudiante()
+        elif(selec == "5"):
+            list.print()
+            list.search(1)
+            print(list.graphviz_code())
+        elif(selec == "6"):
             break
+        else:
+            print("No se ha seleccionado ninguna opcion correcta")
 
 main()
-

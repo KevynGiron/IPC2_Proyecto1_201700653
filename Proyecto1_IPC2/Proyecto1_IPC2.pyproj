@@ -25,6 +25,9 @@
     <Compile Include="datos.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="gravphiz.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="listaDoblementeEnlazada.py">
       <SubType>Code</SubType>
     </Compile>
