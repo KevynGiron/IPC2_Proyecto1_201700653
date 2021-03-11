@@ -44,7 +44,7 @@ class listaCircular():
             #print(aux.data._matrices__nombre) #imprimir datos de la matriz
             if value == aux.data._matrices__indice:
                 li = aux.data._matrices__lista
-                proceso.create_string(aux.data._matrices__nombre, aux.data._matrices__m, aux.data._matrices__n, li)
+                return proceso.create_string(aux.data._matrices__nombre, aux.data._matrices__m, aux.data._matrices__n, li)
                 break
             #for a in li:
                 #print(a._datos__dato)

@@ -1,4 +1,5 @@
 from listaDoblementeEnlazada import listaCircular
+from gravphiz import gravphiz as grafica
 from procesar_archivo import procesar_archivo as pa
 import xml.etree.ElementTree as ET
 from tkinter import filedialog
@@ -80,9 +81,18 @@ def main():
         elif(selec == "4"):
             datos_estudiante()
         elif(selec == "5"):
+            code = ""
+            print("0. Lista Circular")
             list.print()
-            list.search(1)
-            print(list.graphviz_code())
+            print("Selecciona una opcion...")
+            x = input()
+            if x == "0":
+                code = grafica.circular_code(list.graphviz_code())
+            else:
+                code = list.search(x)
+            grafica.create_file(code)
+            grafica.compilar_dot()
+            #print(list.graphviz_code())
         elif(selec == "6"):
             break
         else:
