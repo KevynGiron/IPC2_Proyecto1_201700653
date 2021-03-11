@@ -4,8 +4,10 @@ class gravphiz():
     """description of class"""
 
     def create_string(name, n, m, list):
+        eme = '"m = ' + m + '"'
+        ene = '"n = ' + n + '"'
         head = 'digraph mat{\nrankdir=UD\n\tMatrices->' + name + '\n'
-        body = '\t' + name + '->m=' + m + '\n\t' + name + '->n=' + n + '\n'
+        body = '\t' + name + '->' + eme + '\n\t' + name + '->' + ene + '\n'
         contador = 0
         body_aux = ""
         list_aux = []

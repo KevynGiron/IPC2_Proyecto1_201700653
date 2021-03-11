@@ -39,31 +39,23 @@ class listaCircular():
             #print(a._datos__y)
 
     def search(self, value):
+        code = ""
         aux = self.head
         while (aux.next != self.head):
             #print(aux.data._matrices__nombre) #imprimir datos de la matriz
             if value == aux.data._matrices__indice:
                 li = aux.data._matrices__lista
-                return proceso.create_string(aux.data._matrices__nombre, aux.data._matrices__m, aux.data._matrices__n, li)
+                code = proceso.create_string(aux.data._matrices__nombre, aux.data._matrices__m, aux.data._matrices__n, li)
                 break
-            #for a in li:
-                #print(a._datos__dato)
-                #print(a._datos__binario)
-                #print(a._datos__x)
-                #print(a._datos__y)
+
             aux = aux.next
-        #print(aux.data._matrices__nombre)
         #---------------------------------------------------------------------------------
-        #if value == aux.data._matrices__indice:
-         #       li = aux.data._matrices__lista
-          #      proceso.create_string(aux.data._matrices__nombre, aux.data._matrices__m, aux.data._matrices__n, li)
-          #-------------------------------------------------------------------------
-        #li = aux.data._matrices__lista
-        #for a in li:
-            #print(a._datos__dato)
-            #print(a._datos__binario)
-            #print(a._datos__x)
-            #print(a._datos__y)
+        if value == aux.data._matrices__indice:
+            li = aux.data._matrices__lista
+            code = proceso.create_string(aux.data._matrices__nombre, aux.data._matrices__m, aux.data._matrices__n, li)
+        #-------------------------------------------------------------------------
+        print(code)
+        return code
 
     def graphviz_code(self):
         code = ""

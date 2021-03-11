@@ -89,7 +89,7 @@ def main():
             if x == "0":
                 code = grafica.circular_code(list.graphviz_code())
             else:
-                code = list.search(x)
+                code = list.search(int(x))
             grafica.create_file(code)
             grafica.compilar_dot()
             #print(list.graphviz_code())

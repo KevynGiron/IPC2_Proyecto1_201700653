@@ -1,0 +1,10 @@
+digraph mat{
+rankdir=UD
+	Matrices->MatrizPrueba2
+	MatrizPrueba2->"m = 3"
+	MatrizPrueba2->"n = 3"
+	MatrizPrueba2->2->3->3
+	MatrizPrueba2->0->8->0
+	MatrizPrueba2->9->8->0
+
+}
