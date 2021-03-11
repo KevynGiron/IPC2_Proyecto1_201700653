@@ -76,7 +76,8 @@ class listaCircular():
             code2 = aux.next.data._matrices__nombre
             while (aux.next != self.head):
                 code2 = aux.next.data._matrices__nombre
-                code = code + '\t"' + aux.data._matrices__nombre + '"-->"' + '"' + code2 + '"\n'
+                code = code + '\t"' + aux.data._matrices__nombre + '"->"' + code2 + '"\n'
                 aux = aux.next
-            code = code + '\t"' + code2 + '"-->' + '"' + self.head.data._matrices__nombre + '"' +'"\n'
+            code = code + '\t"' + code2 + '"->' + self.head.data._matrices__nombre + '"' +'"\n'
+        print(code)
         return code
