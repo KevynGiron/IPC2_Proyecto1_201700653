@@ -1,7 +1,7 @@
 digraph mat{
 rankdir=UD
-	"MatrizPrueba1"->"MatrizPrueba2"
-	"MatrizPrueba2"->"Ejemplo"
-	"Ejemplo"->MatrizPrueba1""
-
+"n0" [label = "MatrizPrueba1"]
+"n1" [label = "MatrizPrueba2"]
+"n2" [label = "Ejemplo"]
+n0->n1->n2->n0
 }

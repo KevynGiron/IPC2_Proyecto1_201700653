@@ -65,26 +65,24 @@ def main():
 
         if(selec == "1"):
             cargar_archivo()
-            #datos_estudiante()
-            #list = listaDoblementeEnlazada()
-
-            #list.agregar_final(10)
-            #list.agregar_final(20)
-            #list.agregar_final(30)
-            #list.agregar_final(40)
-            #list.agregar_final(50)
-            #list.print()
         elif(selec == "2"):
-            print("")
+            print("---------------------------------------------------------------")
+            list.print()
+            print("Selecciona una opcion...")
+            print("---------------------------------------------------------------")
+            x = input()
+            list.process(int(x))
         elif(selec == "3"):
             print("")
         elif(selec == "4"):
             datos_estudiante()
         elif(selec == "5"):
             code = ""
+            print("---------------------------------------------------------------")
             print("0. Lista Circular")
             list.print()
             print("Selecciona una opcion...")
+            print("---------------------------------------------------------------")
             x = input()
             if x == "0":
                 code = grafica.circular_code(list.graphviz_code())
@@ -92,6 +90,7 @@ def main():
                 code = list.search(int(x))
             grafica.create_file(code)
             grafica.compilar_dot()
+            print("---------------------------------------------------------------")
             #print(list.graphviz_code())
         elif(selec == "6"):
             break

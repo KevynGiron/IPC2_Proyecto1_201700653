@@ -1,4 +1,5 @@
 from nodoCircular import nodoCircular as nodo
+from procesar_archivo import procesar_archivo as pro
 from gravphiz import gravphiz as proceso
 
 class listaCircular():
@@ -57,19 +58,47 @@ class listaCircular():
         print(code)
         return code
 
+    def process(self, value):
+        aux = self.head
+        while (aux.next != self.head):
+            #print(aux.data._matrices__nombre) #imprimir datos de la matriz
+            if value == aux.data._matrices__indice:
+                li = aux.data._matrices__lista
+                pro.create_string(aux.data._matrices__n, li)
+                break
+            aux = aux.next
+        #---------------------------------------------------------------------------------
+        if value == aux.data._matrices__indice:
+            li = aux.data._matrices__lista
+            pro.create_string(aux.data._matrices__m, li)
+        #-------------------------------------------------------------------------
+        
     def graphviz_code(self):
         code = ""
         aux = self.head
         code2 = ""
+        lista = []
 
         if self.is_empty():
             code = '\t"Esta vacia"'
         else:
-            code2 = aux.next.data._matrices__nombre
+            #code2 = aux.next.data._matrices__nombre
+            lista.append(aux.data._matrices__nombre)
             while (aux.next != self.head):
-                code2 = aux.next.data._matrices__nombre
-                code = code + '\t"' + aux.data._matrices__nombre + '"->"' + code2 + '"\n'
+                lista.append(aux.next.data._matrices__nombre)
+                #code2 = aux.next.data._matrices__nombre
+                #code = code + '\t"' + aux.data._matrices__nombre + '"->"' + code2 + '"\n'
                 aux = aux.next
-            code = code + '\t"' + code2 + '"->' + self.head.data._matrices__nombre + '"' +'"\n'
-        print(code)
-        return code
+            #code = code + '\t"' + code2 + '"->' + self.head.data._matrices__nombre + '"' +'"\n'
+        declarar_nodos = ""
+        cont = 0
+        for a in lista:
+            declarar_nodos = declarar_nodos + '"n' + str(cont) + '" [label = "' + str(a) + '"]\n'
+            cont = cont + 1
+        contador = 0
+        for a in lista:
+            code = code + 'n' + str(contador) + '->'
+            contador = contador + 1
+        code = code + 'n0'
+        final_code = declarar_nodos + code
+        return final_code

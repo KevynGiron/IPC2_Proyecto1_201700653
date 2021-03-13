@@ -1,16 +1,21 @@
 class procesar_archivo():
 
     #hacer la funcion que compare y que me devuelva un verdadero o falso
-    def crear_lista(datos, m):
+    def create_string(m, list):
+        contador = 0
+        list_aux = []
+        ayuda = []
 
-        list = []
-        sublist = []
+        for a in list:
+            print("Dato: " + str(a._datos__dato))
+            if int(m) < contador:
+                ayuda.append(a._datos__dato)
+                contador = contador + 1
+            if contador == int(m):
+                contador = 0
+                list_aux.append(ayuda)
+                ayuda.clear()
 
-        for a in datos:
-            sublist.append(a)
-            
-            if int(a._datos__y) % m == 0:
-                list.append(sublist)
-                sublist = []
 
-        tamaño = len(list)
+        for a in list_aux:
+            print(a)
